@@ -1,0 +1,564 @@
+@import "globals.less";
+
+@white:							#FFFFFF;
+@black:							#000000;
+
+body{
+    background: gray;
+}
+
+@delay1:						100ms;
+@time1:							600ms; //texto1
+
+@time10:                        500ms; //secuencia1Out
+@delay10:                       @delay1 + @time1 + 2400;
+
+@time21:                        500ms; //texto21
+@delay21:                       @delay10 + @time10 + 300;
+@time22:                        500ms; //mano
+@delay22:                       @delay21 + @time21+ 300;
+@time23:                        500ms; //texto22
+@delay23:                       @delay22 + @time22+ 300;
+@time24:                        500ms; //texto23s
+@delay24:                       @delay23 + @time23+ 200;
+@time25:                        900ms; //animate arrow
+@delay25:                       @delay24 + @time24 + 200;
+
+@time26:                       900ms;
+
+
+@time31:                        900ms;
+@delay31:                       2900ms;
+@time32:                        600ms; 
+//@delay32:                       @delay31 + @time31 + 500;
+@delay32:                       500ms;
+@time33:                        600ms; 
+@delay33:                       @delay32 + @time32 + 300;
+@time34:                        600ms; 
+@delay34:                       @delay33 + @time33 + 300;
+@time35:                        600ms; 
+@delay35:                       @delay34 + @time34 + 300;
+@time36:                        1200ms; 
+@delay36:                       @delay35 + @time35 + 300;
+@time37:                        600ms; 
+@delay37:                       @delay36 + @time36 + 1200;
+@time38:                        600ms; 
+@delay38:                       @delay37 + @time37 + 400; //letras out para que entre el precio
+@time39:                        600ms; 
+@delay39:                       @delay38 + @time38 + 300;
+/////animations------------------------------------------------------------
+
+.animatedOut{
+    0% { .opacity(1); }
+    70% { .opacity(1); }
+    80% { .opacity(0.6); }
+    90% { .opacity(0.3); }
+    100% { .opacity(0); }
+}
+@keyframes animationOut {
+    .animatedOut;
+}
+@-webkit-keyframes animationOut {
+    .animatedOut;
+}
+@-ms-keyframes animationOut {
+    .animatedOut;
+}
+@-moz-keyframes animationOut {
+    .animatedOut;
+}
+//animated OUT -----------------------------
+
+.animatedIn{
+    from { .opacity(0); }
+    to { .opacity(1); }
+}
+@keyframes animationIn {
+    .animatedIn;
+}
+@-webkit-keyframes animationIn {
+    .animatedIn;
+}
+@-ms-keyframes animationIn {
+    .animatedIn;
+}
+@-moz-keyframes animationIn {
+    .animatedIn;
+}
+
+//anitmated IN ----------------------
+
+@startLegal:                      530px;
+.animatedLegal {
+    0% { left:      @startLegal; }
+    100% { left:    -@startLegal - 100px; }
+}
+@keyframes animationLegal {
+    .animatedLegal;
+}
+@-webkit-keyframes animationLegal {
+    .animatedLegal;
+}
+@-ms-keyframes animationLegal {
+    .animatedLegal;
+}
+@-moz-keyframes animationLegal {
+    .animatedLegal;
+}
+
+//animatedLegal -----------------------
+
+@startArrow:                      -32px;
+.animatedArrow {
+    0% { left:          @startArrow; }
+    50% { left:         @startArrow - 7px; }
+    100% { left:        @startArrow; }
+}
+@keyframes animationArrow {
+    .animatedArrow;
+}
+@-webkit-keyframes animationArrow {
+    .animatedArrow;
+}
+@-ms-keyframes animationArrow {
+    .animatedArrow;
+}
+@-moz-keyframes animationArrow {
+    .animatedArrow;
+}
+//animatedArrow -----------------------
+
+.animatedZindex {
+    0% { z-index:   -1; }
+    100% { z-index:   90; }
+}
+@keyframes animationZindex {
+    .animatedZindex;
+}
+@-webkit-keyframes animationZindex {
+    .animatedZindex;
+}
+@-ms-keyframes animationZindex {
+    .animatedZindex;
+}
+@-moz-keyframes animationZindex {
+    .animatedZindex;
+}
+//animatedZindex -----------------------
+.animatedZindexDown {
+    0% { z-index:   110; }
+    100% { z-index:   -1; }
+}
+@keyframes animationZindexDown {
+    .animatedZindexDown;
+}
+@-webkit-keyframes animationZindexDown {
+    .animatedZindexDown;
+}
+@-ms-keyframes animationZindexDown {
+    .animatedZindexDown;
+}
+@-moz-keyframes animationZindexDown {
+    .animatedZindexDown;
+}
+//animatedZindex -----------------------
+
+//animatedLegal -----------------------
+
+@startArrowVertical:                      -35px;
+.animatedArrowVertical {
+    0% { top:          @startArrowVertical; }
+    50% { top:         @startArrowVertical - 7px; }
+    100% { top:        @startArrowVertical; }
+}
+@keyframes animationArrowVertical {
+    .animatedArrowVertical;
+}
+@-webkit-keyframes animationArrowVertical {
+    .animatedArrowVertical;
+}
+@-ms-keyframes animationArrowVertical {
+    .animatedArrowVertical;
+}
+@-moz-keyframes animationArrowVertical {
+    .animatedArrowVertical;
+}
+//animatedArrowVertical -----------------------
+//@leftStartCta:                  -200px;
+//@leftEndCta:                    38px;
+@leftStartCta:                  -100%;
+@leftEndCta:                    0;
+.animatedLeftToRight {
+    from {
+        left: @leftStartCta;
+        .opacity( 0 );
+    }
+    to {
+        left: @leftEndCta;
+        .opacity( 1 );
+    }
+}
+
+
+@keyframes animationLeftToRight {
+    .animatedLeftToRight;
+}
+@-webkit-keyframes animationLeftToRight {
+    .animatedLeftToRight;
+}
+@-ms-keyframes animationLeftToRight {
+    .animatedLeftToRight;
+}
+@-moz-keyframes animationLeftToRight {
+    .animatedLeftToRight;
+}
+
+
+
+@width:                                                 970px;
+@height:                                                250px;
+@border:                                                3px;
+@borderOut:                                             1px;
+
+@widthBanner:                                           @width - ( @border * 2 ) - ( @borderOut * 2 );
+@heightBanner:                                          @height - ( @border * 2 ) - ( @borderOut * 2 );
+
+body{
+	margin:                                             0;
+	padding:                                            0;
+    width:                                              @width;
+    height:                                             @height;
+	font-family:                                        "Arial",helvetica,sans-serif;
+	font-size:                                          12px;
+    
+}
+
+#contenedor {
+    width:                                                @widthBanner;
+    height:                                               @heightBanner;
+    position:                                             relative;
+    overflow:                                             hidden;
+    border:                                               @border solid white;
+    //background:                                           url( '../img/bg.jpg') no-repeat center center contain;
+    //.animationSimple( animateBg forwards 10s linear  0ms infinite );
+} //contenedor
+
+//#skip {
+//    z-index:                                                100;
+//    width: 100%;
+//    height: 100%;
+//    .absoluteTopLeft( 0,0 );
+//    .animationSimple( animationZindexDown forwards @time10 linear @delay10 );
+//}
+//#mascara {
+//  z-index:                                                90;
+//  width: 100%;
+//  height: 100%;
+//  .absoluteTopLeft( 0,0 );
+//}
+.mascara {
+    z-index:                                                90;
+}
+
+#logo {
+    .absoluteTopLeft( 0,0 );
+    .size( 156px,42px );
+    background:                                               url('../img/logo.png') no-repeat transparent top left;
+}
+#footer {
+    .absoluteBottomRight( 0,0 );
+    .size( 182px,21px );
+    background:                                             url('../img/footer.png') no-repeat transparent bottom right;
+}
+
+#speaker {
+    //.absoluteTopRight( 30px,30px );
+    display:                                                none;
+    position:                                               absolute;
+    top:                                                    30px;
+    right:                                                  30px;
+    .size( 37px,28px );
+    cursor:                                                 pointer;
+    &.visible {
+        display: block;
+        background-image:                                   url( '../img/speaker.png' );
+        background-position:                                top left;
+        background-color:                                   transparent;
+    }
+    &.click {
+        background-position:                                bottom left;
+    }
+}
+
+#reload {
+    .absoluteTopRight( 27px,12px );
+	.size( 21px, 21px );
+    cursor:                                                 pointer;
+    background:                                             url('../img/again.png') no-repeat transparent bottom right;
+    z-index:                                                80;
+    .opacity( 0 );
+    z-index:                                                -1;
+    //.transition( .4s all @delay39 );
+    &.visible {
+        .animationSimpleDoble( animationIn forwards @time39 linear @delay39, animationZindex forwards @time39 linear @delay39 );
+    }
+}
+#exit {
+    //.fullSize();
+    //display:                                            none;
+    cursor:                                             pointer;
+    //z-index:                                            -1;
+    //.animationSimple( animationZindex forwards @time36 linear @delay36 );
+}
+
+#sketch {
+    .absoluteTopLeft( 45px,337px );
+	.size( 191px, 135px );
+    cursor:                                             pointer;
+    background:                                         transparent;
+    z-index:                                            -1;
+    .animationSimple( animationZindex forwards @time21 linear @delay21 );
+}
+
+#secuencia1 {
+    .fullSize;
+    background:                                             url( '../img/back4.jpg' ) transparent no-repeat center right;
+    //.animationSimple( animationOut forwards @time10 linear @delay10 );
+    z-index:                                                10;
+}
+
+#texto1 {
+    .absoluteTopLeft( 76px,38px );
+    .size( 262px,52px );
+    background:                                             url( '../img/texto1_1.png' ) transparent no-repeat center;
+    .opacity( 0 );
+    .animationSimple( animationIn forwards @time1 linear @delay1 );
+}
+
+#secuencia2 {
+    .fullSize;
+    background:                                             url( '../img/back2.jpg' ) transparent no-repeat center center;
+    .opacity( 0 );
+    .animationSimple( animationIn forwards @time10 linear @delay10 );
+    z-index:                                                20;
+    &.animadoYa {
+        .animationSimple( animationIn forwards @time10 linear 0s );
+    }
+}
+
+#texto21 {
+    .absoluteTopLeft( 64px,28px );
+    .size( 154px,133px );
+    background:                                             url( '../img/texto2_1.png' ) transparent no-repeat center;
+    .opacity( 0 );
+    .animationSimple( animationIn forwards @time21 linear @delay21 );
+}
+
+#mano {
+    .absoluteTopRight( 27px,66px );
+    .size( 64px,71px );
+    background:                                             url( '../img/mano.png' ) transparent no-repeat center right;
+    .opacity( 0 );
+    .animationSimple( animationIn forwards @time23 linear @delay23 );
+}
+#texto22 {
+    .absoluteTopRight( 121px,30px );
+    .size( 108px,55px );
+    background:                                             url( '../img/texto2_2.png' ) transparent no-repeat center right;
+    .opacity( 0 );
+    .animationSimple( animationIn forwards @time22 linear @delay22 );
+    .transition( .4s all .3s );
+}
+#arrowAction {
+    .absoluteTopLeft( 20px,@startArrow );
+    .size( 23px,19px );
+    background:                                             url( '../img/flecha_1.png' ) transparent no-repeat center right;
+    .opacity( 0 );
+    .animationSimpleDoble( animationIn forwards @time24 linear @delay24, animationArrow forwards @time25 linear @delay25 8 );
+}
+
+#texto23 {
+    .absoluteBottomRight( 64px,33px );
+    .size( 99px,36px );
+    background:                                             url( '../img/texto3_1.png' ) transparent no-repeat center right;
+    .opacity( 0 );
+    .transition( .4s all .2s );
+    &.visible {
+        .opacity( 1 );
+        #arrowSpeaker {
+            .opacity( 1 );
+            .animationSimple( animationArrowVertical forwards @time26 linear 0ms 8 );
+        }
+    }
+} //texto23
+
+#arrowSpeaker {
+    .absoluteTopRight( @startArrowVertical,0 );
+    .size( 19px,23px );
+    background:                                             url( '../img/flecha3.png' ) transparent no-repeat center right;
+    .opacity( 0 );
+}
+
+
+#calling {
+    .absoluteTopLeft( 7px,289px );
+    .size( 406px,233px );
+    background:                                             url( '../img/back3.jpg' ) transparent no-repeat center right;
+    .opacity( 0 );
+    .transition( .4s all .3s );
+    &.visible {
+        .opacity( 1 );
+    }
+}
+
+#activeSound {
+    .absoluteTopRight( 121px,30px );
+    .size( 108px,55px );
+    background:                                             url( '../img/texto2_3.png' ) transparent no-repeat center right;
+    .opacity( 0 );
+    &.visible {
+        .opacity( 1 );
+        cursor:                                             pointer;
+    }
+}
+
+#secuencia3 {
+     .fullSize;
+    background-image:                                   url( '../img/back4.jpg' );
+    background-position:                                center left;
+    background-color:                                   transparent;
+    .opacity( 0 );
+    z-index:                                                30;
+    .transition( .4s opacity .3s );
+    &.visible {
+        .opacity( 1 );
+        //.animationSimple( animationBgLateral forwards @time31 cubic-bezier(0.57, 0.01, 1, 1) @delay31 );
+    }
+}
+
+@topLineaTexto:                                         70px;
+@heightLineaTexto:                                      32px;
+@leftTexto3:                                            38px;
+
+#texto31 {
+    .absoluteTopLeft( @topLineaTexto,@leftTexto3 );
+    .size( 135px,@heightLineaTexto );
+    background:                                             url( '../img/texto4_1.png' ) transparent no-repeat top left;
+    .opacity( 0 );
+    //.animationSimple( animationIn forwards @time32 linear @delay32 );
+    .animationSimpleDoble( animationIn forwards @time32 linear @delay32, animationOut forwards @time37 linear @delay37 );
+}
+#texto32 {
+    .absoluteTopLeft( @topLineaTexto,@leftTexto3 + 137 );
+    .size( 97px,@heightLineaTexto );
+    background:                                             url( '../img/texto4_2.png' ) transparent no-repeat top left;
+    .opacity( 0 );
+    //.animationSimple( animationIn forwards @time33 linear @delay33 );
+    .animationSimpleDoble( animationIn forwards @time33 linear @delay33, animationOut forwards @time37 linear @delay37 );
+}
+#texto33 {
+    .absoluteTopLeft( @topLineaTexto,@leftTexto3 + 233 );
+    .size( 44px,@heightLineaTexto );
+    background:                                             url( '../img/texto4_3.png' ) transparent no-repeat top left;
+    .opacity( 0 );
+    //.animationSimple( animationIn forwards @time34 linear @delay34 );
+    .animationSimpleDoble( animationIn forwards @time34 linear @delay34, animationOut forwards @time37 linear @delay37 );
+}
+
+#texto34 {
+    .absoluteTopLeft( @topLineaTexto + 36,@leftTexto3 );
+    .size( 278px,27px );
+    background:                                             url( '../img/texto4_4.png' ) transparent no-repeat top left;
+    .opacity( 0 );
+    //.animationSimple( animationIn forwards @time35 linear @delay35 );
+    .animationSimpleDoble( animationIn forwards @time35 linear @delay35, animationOut forwards @time37 linear @delay37 );
+}
+
+.cta {
+    //.absoluteTopLeft( 149px,@leftStartCta );
+    //.size( 171px,32px );
+    //background:                                             url( '../img/cta.png' ) transparent no-repeat top left;
+    .absoluteTopLeft( 0,@leftStartCta );
+    .size( 100%,100% );
+    background:                                             url( '../img/cta.png' ) transparent no-repeat left center;
+    cursor:                                                 pointer;
+    .opacity( 0 );
+    .animationSimple( animationLeftToRight forwards @time36 linear @delay36 );
+}
+
+@topTexto32:                                               76px;
+#texto35 {
+    .absoluteTopLeft( @topTexto32,@leftTexto3 );
+    .size( 354px,23px );
+    background:                                             url( '../img/texto4_5.png' ) transparent no-repeat top left;
+    .opacity( 0 );
+    .animationSimple( animationIn forwards @time38 linear @delay38 );
+}
+
+#texto36 {
+    .absoluteTopLeft( @topTexto32 + 27,@leftTexto3 );
+    .size( 354px,22px );
+    background:                                             url( '../img/texto4_6.png' ) transparent no-repeat top left;
+    .opacity( 0 );
+    .animationSimple( animationIn forwards @time39 linear @delay39 );
+}
+
+#pive {
+    .absoluteBottomLeft( 2px,10px );
+    .size( 35px,28px );
+    background:                                             url( '../img/pive.png' ) transparent no-repeat top left;
+    .opacity( 0 );
+    .animationSimple( animationIn forwards @time37 linear @delay37 );
+}
+#tuMedida {
+    .absoluteBottomRight( 31px,8px );
+    .size( 140px,46px );
+    background:                                             url( '../img/tuMedida.png' ) transparent no-repeat top left;
+    .opacity( 0 );
+    .animationSimple( animationIn forwards @time37 linear @delay37 );
+}
+#legalContainer {
+  .absoluteBottomLeft( 0,43px ); 
+  width:                                                  600px;
+  height:                                                 15px;
+  overflow:                                               hidden;
+  .opacity( 0 );
+  .animationSimple( animationIn forwards @time37 linear @delay37 );
+  p {
+    color:                                                white;
+    font-family:                                          Arial;
+    font-size:                                            10px;
+    line-height:                                          12px;
+    text-shadow:                                          0 1px 2px rgba(0, 0, 0, 0.6);
+  }
+} //legalContainer
+
+#main-container {
+    width:                                                @width - ( @borderOut * 2 );
+    height:                                               @height - ( @borderOut * 2 );
+    border:                                               @borderOut solid black;
+    position:                                             absolute;
+    overflow:                                             hidden;
+    display:                                              block;
+    left:                                                 0;
+    top:                                                  0;
+    -moz-user-select:                                     -moz-none;
+    -khtml-user-select:                                   none;
+    -webkit-user-select:                                  none;
+    -ms-user-select:                                      none;
+    user-select:                                          none;
+      .animado.animado {
+        -webkit-animation-play-state:                     paused;
+        -moz-animation-play-state:                        paused;
+        animation-play-state:                             paused;
+      }
+      .animado2.animado2 {
+        -webkit-animation-play-state:                     paused;
+        -moz-animation-play-state:                        paused;
+        animation-play-state:                             paused;
+      }
+}
+
+#yt-close {
+  z-index:                                              999;
+}

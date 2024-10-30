@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta data-template-name="Template_H5T_mhinpage-970x250-image">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <script type="text/javascript" src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/external_hosted/polymer/custom.elements.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/ads/ci/ytclosebutton/1/ytclosebutton_min.js"></script>
+  <script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+    <audio id="phoneSound" preload="auto" muted >
+      <source src="./audio/audio.mp3" />
+    </audio> 
+    <div id="main-container">
+      <div id="contenedor">
+        <!--<div id="skip"></div>-->
+        <!--<div id="mascara">-->
+          <!--<div id="exit" class="mascara"></div>-->
+          <ci-ytclosebutton lang="es" theme="white" shadow="false" id="yt-close"> </ci-ytclosebutton>
+          <div id="logo" class="mascara"></div>
+          <div id="footer" class="mascara"></div>
+            <div id="speaker" class="mascara"></div>
+            <div id="sketch" class="mascara">
+                <canvas id="paint"></canvas>
+            </div>
+            <div id="reload" class="mascara"></div>
+          <!--</div>-->
+          
+          <div id="secuencia1" class="animado">
+            <div id="texto1" class="animado"></div>
+          </div>
+          
+          <div id="secuencia2" class="animado" >
+            <div id="texto21" class="animado" ></div>
+            <div id="texto22" class="animado" >
+              <div id="arrowAction" class="animado" ></div>
+            </div>
+            <div id="mano" class="animado" ></div>
+            <div id="calling"></div>
+            <div id="texto23">
+              <div id="arrowSpeaker"></div>
+            </div>
+          </div>
+          
+          <div id="secuencia3">
+            <div id="texto31" class="animado2"></div>
+            <div id="texto32" class="animado2"></div>
+            <div id="texto33" class="animado2"></div>
+            <div id="texto34" class="animado2"></div>
+            <div id="texto35" class="animado2"></div>
+            <div id="texto36" class="animado2"></div>
+            <div id="exit" class=" cta animado2"></div>
+            <div id="pive" class="animado2"></div>
+            <div id="tuMedida" class="animado2"></div>
+            <div id="legalContainer" class="animado2">
+              <p>
+                Consumo medio combinado de 3,4 a 6,0 l/100 km. Emisiones de CO2 de 88 a 139 g/km. Consulta condiciones en seat.es
+              </p>
+            </div>
+          </div><!--secuencia3-->
+        </div><!--contenedor-->
+      </div><!--mainContainer-->
+
+  <script src="./js/logic.js"></script>
+  <script type="text/javascript" src="./js/main.js"></script>
+    
+</body>
+</html>
